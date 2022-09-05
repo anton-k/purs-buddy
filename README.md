@@ -18,3 +18,4 @@ to substitute all sugestions:
 Note that repo should be git project.
 It applies substitution to all files that are tracked by get and are purescript files.
 
+For `ImplicitImport` error/warning it skips the biggest import and treats it as Prelude.
