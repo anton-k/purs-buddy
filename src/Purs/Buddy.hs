@@ -22,8 +22,7 @@ import System.Directory
 import Turtle qualified as Turtle
 import Turtle.Pattern qualified as P
 import Purs.Buddy.Args
-
--- rebuild :: FilePath -> String -- IO Build
+import Data.String
 
 rebuildJson :: FilePath -> ByteString
 rebuildJson file = encode $
@@ -55,6 +54,7 @@ applySuggestions Args{..} file = do
   results <- build'result . onPrelude <$> rebuild file
   let sugs = maybeToList . result'suggestion =<< results
   liftIO $ applyToFile sugs file
+  Turtle.echo $ fromString $ "Replace in file: " <> file
   where
     onPrelude
       | args'skipPrelude = skipPreludeImports

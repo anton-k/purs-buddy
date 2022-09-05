@@ -23,7 +23,6 @@ library
   exposed-modules:
       Purs.Buddy
       Purs.Buddy.Args
-      Purs.Buddy.Example
       Purs.Buddy.Derive
       Purs.Buddy.Types
   other-modules:
