@@ -1,6 +1,6 @@
 # purs-buddy
 
-Applies purescript compiler suggestions t othe code base.
+Applies purescript compiler suggestions to the code base.
 First run the purescript ide server as background process:
 
 ```
